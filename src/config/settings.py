@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     reload: bool = True
 
     # Security settings
-    allowed_origins: list = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    allowed_origins: list = ["http://localhost:3000", "http://127.0.0.1:3000", "https://physical-ai-humanoid-textbook-mu.vercel.app/"]
 
     class Config:
         env_file = ".env"

@@ -146,7 +146,7 @@ app.add_middleware(InputValidationMiddleware)
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins if hasattr(settings, 'allowed_origins') else ["http://localhost:3000"],  # In production, specify actual origins
+    allow_origins=settings.allowed_origins if hasattr(settings, 'allowed_origins') else ["http://localhost:3000", "https://physical-ai-humanoid-textbook-mu.vercel.app/"],  # In production, specify actual origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

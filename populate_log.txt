@@ -1,0 +1,2 @@
+C:\Users\sabte\OneDrive\Desktop\All About IT\GIAIC Q4\GIAIC Q4 Hackathons\Hackathon 1\Step-1-physical-ai-humanoid-textbook\Backend\populate_db.py:118: DeprecationWarning: `recreate_collection` method is deprecated and will be removed in the future. Use `collection_exists` to check collection existence and `create_collection` instead.
+  qdrant.recreate_collection(

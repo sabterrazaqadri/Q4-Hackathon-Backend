@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: rag-chatbot
+    runtime: python
+    pythonVersion: 3.11.9
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PIP_NO_CACHE_DIR
+        value: 1
+      - key: PIP_DISABLE_PIP_VERSION_CHECK
+        value: 1
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: COHERE_API_KEY
+        sync: false
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        value: sqlite:///./test.db
+      - key: TEXTBOOK_COLLECTION_NAME
+        value: textbook_content
+    autoDeploy: true

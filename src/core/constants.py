@@ -1,0 +1,37 @@
+"""
+Constants for the ChatKit RAG integration.
+"""
+# API Configuration
+API_VERSION = "v1"
+DEFAULT_TEMPERATURE = 0.7
+MAX_TOKENS = 1000
+
+# Database Configuration
+DEFAULT_PAGE_SIZE = 10
+MAX_PAGE_SIZE = 100
+
+# RAG Configuration
+DEFAULT_SEARCH_LIMIT = 5
+DEFAULT_MIN_SIMILARITY_SCORE = 0.5
+DEFAULT_CONFIDENCE_THRESHOLD = 0.7
+
+# Session Configuration
+SESSION_TIMEOUT_MINUTES = 30
+MAX_CONVERSATION_HISTORY = 20
+
+# Validation Configuration
+MIN_RESPONSE_ACCURACY_SCORE = 0.7
+
+# Rate Limiting
+RATE_LIMIT_REQUESTS = 100
+RATE_LIMIT_WINDOW = 60  # in seconds
+
+# Model Configuration
+DEFAULT_GEMINI_MODEL = "gemini-1.5-flash"
+DEFAULT_COHERE_MODEL = "command-r-plus-08-2024"
+COHERE_EMBEDDING_MODEL = "embed-english-v3.0"
+
+# Text Processing
+MAX_QUERY_LENGTH = 1000
+MAX_SELECTED_TEXT_LENGTH = 5000
+MAX_RESPONSE_LENGTH = 10000

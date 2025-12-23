@@ -12,6 +12,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.http import models
 import cohere
 import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 
 class RAGService:
@@ -136,15 +137,15 @@ Remember: Answer ONLY based on the information in the documents above. If the an
                 candidate_count=1,
             )
 
-            # Generate response
+            # Generate response with safety settings disabled
             response = self.gemini_model.generate_content(
                 full_prompt,
                 generation_config=generation_config,
                 safety_settings={
-                    'HARASSMENT': 'block_none',
-                    'HATE_SPEECH': 'block_none',
-                    'SEXUALLY_EXPLICIT': 'block_none',
-                    'DANGEROUS_CONTENT': 'block_none'
+                    HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+                    HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+                    HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+                    HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
                 }
             )
 

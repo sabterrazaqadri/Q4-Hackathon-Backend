@@ -27,7 +27,7 @@ RATE_LIMIT_REQUESTS = 100
 RATE_LIMIT_WINDOW = 60  # in seconds
 
 # Model Configuration
-DEFAULT_GEMINI_MODEL = "gemini-1.5-flash"
+DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
 DEFAULT_COHERE_MODEL = "command-r-plus-08-2024"
 COHERE_EMBEDDING_MODEL = "embed-english-v3.0"
 

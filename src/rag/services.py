@@ -48,8 +48,7 @@ class RAGService:
         # Generate embedding for the search text using Cohere
         embedding_response = self.cohere_client.embed(
             texts=[search_text],
-            model="embed-english-v3.0",
-            input_type="search_query"
+            model="embed-english-v3.0"
         )
         query_embedding = embedding_response.embeddings[0]
 

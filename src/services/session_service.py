@@ -136,5 +136,5 @@ session_service = SessionService()
 
 
 # Dependency for FastAPI
-def get_session_service():
+async def get_session_service() -> SessionService:
     return session_service

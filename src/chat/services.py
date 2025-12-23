@@ -79,5 +79,6 @@ class ChatService:
 
 
 # Dependency for FastAPI
-def get_chat_service(session_service=SessionService()):
+async def get_chat_service() -> ChatService:
+    session_service = SessionService()
     return ChatService(session_service)
